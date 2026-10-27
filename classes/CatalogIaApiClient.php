@@ -2,8 +2,8 @@
 /**
  * Catálogo IA - Cliente HTTP del servicio.
  *
- * @author    Catálogo IA
- * @copyright Catálogo IA
+ * @author    Vera Technology
+ * @copyright Vera Technology
  * @license   Proprietary
  */
 

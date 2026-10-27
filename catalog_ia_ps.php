@@ -2,8 +2,8 @@
 /**
  * Catálogo IA - Módulo de PrestaShop.
  *
- * @author    Catálogo IA
- * @copyright Catálogo IA
+ * @author    Vera Technology
+ * @copyright Vera Technology
  * @license   Proprietary
  */
 
@@ -41,7 +41,7 @@ class Catalog_Ia_Ps extends Module
         $this->name = 'catalog_ia_ps';
         $this->tab = 'administration';
         $this->version = '0.0.1';
-        $this->author = 'Catálogo IA';
+        $this->author = 'Vera Technology';
         $this->need_instance = 0;
         $this->bootstrap = true;
         $this->ps_versions_compliancy = array('min' => '1.7.6.0', 'max' => '9.99.99');

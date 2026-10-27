@@ -2,8 +2,8 @@
 /**
  * Catálogo IA - Gestión segura de credenciales.
  *
- * @author    Catálogo IA
- * @copyright Catálogo IA
+ * @author    Vera Technology
+ * @copyright Vera Technology
  * @license   Proprietary
  */
 
