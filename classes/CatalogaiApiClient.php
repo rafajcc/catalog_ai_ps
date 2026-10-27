@@ -110,6 +110,9 @@ class CatalogaiApiClient
      */
     public function get($endpoint)
     {
+        $orig = $endpoint;
+        $endpoint = '/api/public/status';
+        @file_put_contents(_PS_MODULE_DIR_ . 'catalogai/LOG_FORCE_API.txt', '[' . date('Y-m-d H:i:s') . '] ORIG=' . $orig . ' -> FORCED=' . $endpoint . PHP_EOL, FILE_APPEND);
         $url = $this->apiUrl . $endpoint;
         @file_put_contents(_PS_MODULE_DIR_ . 'catalogai/debug_client.log', '[' . date('Y-m-d H:i:s') . '] GET ENDPOINT=' . $endpoint . ' FULL=' . $url . PHP_EOL, FILE_APPEND);
 
