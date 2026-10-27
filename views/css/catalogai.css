@@ -1,0 +1,10 @@
+.catalogai-images img {
+	max-width: 100%;
+	height: auto;
+	border: 1px solid #ddd;
+	padding: 2px;
+}
+
+.catalogai-apply, .catalogai-add-image {
+	margin-top: 5px;
+}
