@@ -126,6 +126,16 @@ class Catalogai extends Module
     {
         $savedKey = Configuration::get('CATALOGAI_API_KEY');
         $keyPlaceholder = !empty($savedKey) ? '********' : '';
+        $keyDesc = $this->l('Clave API generada en el panel de Catalog AI. Déjalo vacío para mantener la clave guardada.');
+        if (!empty($savedKey)) {
+            $len = strlen($savedKey);
+            if ($len > 12) {
+                $masked = substr($savedKey, 0, 6) . str_repeat('*', 14) . substr($savedKey, -4);
+            } else {
+                $masked = str_repeat('*', $len);
+            }
+            $keyDesc .= '<br /><strong style="color:#00b9d8;">' . $this->l('Clave API guardada:') . ' ' . $masked . '</strong>';
+        }
 
         $fields_form = array(
             'form' => array(
@@ -148,7 +158,7 @@ class Catalogai extends Module
                         'name' => 'CATALOGAI_API_KEY',
                         'required' => true,
                         'placeholder' => $keyPlaceholder,
-                        'desc' => $this->l('Clave API generada en el panel de Catalog AI. Déjalo vacío para mantener la clave guardada.')
+                        'desc' => $keyDesc
                     ),
                     array(
                         'type' => 'text',
