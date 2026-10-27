@@ -1,0 +1,10 @@
+/**
+ * Catálogo IA - Estilos de la pantalla de configuración.
+ *
+ * Oculta visualmente lo que se escribe en la Clave API sin usar un campo
+ * password (que dispara el aviso del navegador al enviar por HTTP).
+ */
+.catalog-ia-ps-key.is-concealed {
+    -webkit-text-security: disc;
+    text-security: disc;
+}
