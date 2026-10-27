@@ -16,7 +16,7 @@ class Catalogai extends Module
     {
         $this->name = 'catalogai';
         $this->tab = 'administration';
-        $this->version = '1.0.23';
+        $this->version = '1.0.24';
         $this->author = 'Vera Technology';
         $this->need_instance = 0;
         $this->bootstrap = true;
@@ -62,11 +62,6 @@ class Catalogai extends Module
     public function getContent()
     {
         $output = '';
-
-        $savedKey = Configuration::get('CATALOGAI_API_KEY');
-        if (!empty($savedKey)) {
-            $output .= $this->displayConfirmation($this->l('Hay una clave API guardada. Déjala vacía para mantenerla.'));
-        }
 
         if (Tools::isSubmit('submitCatalogaiConfig') && !Tools::isSubmit('submitCatalogaiTest')) {
             $apiUrl = Tools::getValue('CATALOGAI_API_URL');
