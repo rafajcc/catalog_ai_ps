@@ -69,6 +69,9 @@ $(document).ready(function () {
       $apiKeyInput.focus();
       return;
     }
+    if ((!apiKey || apiKey.trim() === '') && placeholderKey.indexOf('*') !== -1) {
+      apiKey = '';
+    }
 
     var original = $btn.html();
     $btn.prop('disabled', true).html('<i class="icon-refresh icon-spin"></i> Probando...');

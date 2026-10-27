@@ -16,7 +16,7 @@ class Catalogai extends Module
     {
         $this->name = 'catalogai';
         $this->tab = 'administration';
-        $this->version = '1.0.22';
+        $this->version = '1.0.23';
         $this->author = 'Vera Technology';
         $this->need_instance = 0;
         $this->bootstrap = true;
