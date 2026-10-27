@@ -255,6 +255,7 @@ class Catalogai extends Module
 
     public function ajaxProcessTestConnection()
     {
+        @file_put_contents(_PS_MODULE_DIR_ . 'catalogai/DEBUG_HIT.txt', '[' . date('Y-m-d H:i:s') . '] HIT action=testConnection' . PHP_EOL, FILE_APPEND);
         $apiUrl = Tools::getValue('CATALOGAI_API_URL');
         if (empty($apiUrl)) {
             $apiUrl = Configuration::get('CATALOGAI_API_URL');
